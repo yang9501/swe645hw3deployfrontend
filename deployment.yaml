@@ -8,7 +8,7 @@ spec:
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app: frontend-ui
+      workload.user.cattle.io/workloadselector: apps.deployment-default-frontend
   template:
     metadata:
       labels:

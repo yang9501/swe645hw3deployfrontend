@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: default
+spec:
+  replicas: 3
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: frontend-ui
+  template:
+    metadata:
+      labels:
+        app: frontend-ui
+    spec:
+      containers:
+      - image: yang9501/frontend:42
+        imagePullPolicy: Always
+        name: container-0
+        ports:
+        - containerPort: 80
+          name: loadbalancer
+          protocol: TCP

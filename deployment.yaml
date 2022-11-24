@@ -15,7 +15,7 @@ spec:
         app: frontend-ui
     spec:
       containers:
-      - image: yang9501/frontend:59
+      - image: yang9501/frontend:60
         imagePullPolicy: Always
         name: container-0
         ports:
